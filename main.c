@@ -18,11 +18,6 @@ int main(int argc, char **argv)
         return (1);
     }
     fd = open(argv[1], O_RDONLY);
-    if (fd < 0)
-    {
-        write(1, "Cannot read file.\n", 18);
-        return (1);
-    }
 
     char *line;
     // line = get_next_line(fd);
