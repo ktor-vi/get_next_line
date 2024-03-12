@@ -1,4 +1,4 @@
-
+#include "../includes/minishell.h"
 int	test(void)
 {
 	t_entry		*envp;
@@ -16,7 +16,7 @@ int	test(void)
 	envp->value = getenv("PATH");
 	envp->next = NULL;
 	minishell->n_pipes = 3;
-	ls = {.args = (char *[]){"ls", "-l", NULL}};
+	ls = {.args = (char *[]){"ls ", "-l", NULL}};
 	wc = {.args = (char *[]){"wc", "-l", NULL}};
 	xargs = {.args = (char *[]){"xargs", "printf", "0x%x\n", NULL}};
 	cowsay = {.args = (char *[]){"cowsay", NULL}};

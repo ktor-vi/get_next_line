@@ -23,7 +23,6 @@ SRCS        :=            ft_printf/src/ft_printf.c \
                           ft_printf/src/ft_voidhex_fdr.c \
                           get_next_line/get_next_line.c \
                           get_next_line/get_next_line_utils.c \
-                          get_next_line/main.c \
                           libft/ft_atoi.c \
                           libft/ft_bzero.c \
                           libft/ft_calloc.c \

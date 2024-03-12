@@ -22,7 +22,7 @@ INC = includes/minishell.h
 CC = gcc -w
 
 FLAGS = -g -fsanitize=address \
-        -lreadline -L ~/.brew/opt/readline/lib libft.a \
+        -lreadline -L ~/.brew/opt/readline/lib  \
         -I/Users/vphilipp/.brew/opt/readline/include
 
 LIBFT_LIBRARY_DIR = bigft/  # Descriptive variable name
@@ -96,7 +96,7 @@ fclean: clean
 $(NAME): $(LIBFT_LIBRARY_DIR) $(OBJS)
 	@echo "$(YELLOW)Done!$(CLR_RMV)"
 	@make  -C $(LIBFT_LIBRARY_DIR)
-	@$(CC) $(FLAGS) $(OBJS) -o $@
+	@$(CC) $(FLAGS) $(OBJS) bigft/libft.a -o $@
 	@$(call print_completion)
 
 # Target for building "meanyshell" (adjust source files as needed)
